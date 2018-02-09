@@ -1,7 +1,7 @@
 package com.ecpss.message.service.user;
 
 import com.ecpss.message.domain.user.BootUser;
-import com.ecpss.message.infrastructure.user.UserRepository;
+import com.ecpss.message.infrastructure.rptimpl.user.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.ecpss.message.infrastructure.user;
+package com.ecpss.message.infrastructure.rptimpl.user;
 
 import com.ecpss.message.domain.user.BootUser;
 import org.springframework.data.jpa.repository.Query;

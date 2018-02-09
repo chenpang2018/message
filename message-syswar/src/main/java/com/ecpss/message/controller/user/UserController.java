@@ -1,7 +1,7 @@
 package com.ecpss.message.controller.user;
 
 import com.ecpss.message.domain.user.BootUser;
-import com.ecpss.message.infrastructure.user.UserRepository;
+import com.ecpss.message.infrastructure.rptimpl.user.UserRepository;
 import com.ecpss.message.service.user.UserService;
 import com.google.common.collect.Lists;
 
