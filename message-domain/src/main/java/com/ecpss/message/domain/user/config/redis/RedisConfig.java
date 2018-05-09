@@ -1,4 +1,4 @@
-package com.ecpss.message.infrastructure.redis;
+package com.ecpss.message.domain.user.config.redis;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;

@@ -1,16 +1,17 @@
 package com.ecpss.message.domain.user;
 
+import com.ecpss.message.domain.user.base.BaseEntity;
+
 import javax.persistence.*;
 
 /**
  * Created by chenpang on 2018/2/5.
  */
-@Entity(name = "boot_user")
-public class BootUser {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "boot_user_seq")
-    @SequenceGenerator(name = "boot_user_seq", sequenceName = "SEQ_BOOT_USER", allocationSize = 1)
-    private Long id;
+@Entity
+@Table(name = "boot_user")
+@SequenceGenerator(name = "msg_default_seq", sequenceName = "SEQ_MSG_BOOTUSER", allocationSize = 1)
+public class BootUser extends BaseEntity{
+
     @Column(name = "user_name")
     private String userName;
     @Column(name = "user_no")
@@ -22,14 +23,6 @@ public class BootUser {
     public BootUser(String userName, String userNo) {
         this.userName = userName;
         this.userNo = userNo;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getUserName() {
