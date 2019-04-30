@@ -6,18 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class MessageSyswarApplication extends SpringBootServletInitializer{
-
-	public MessageSyswarApplication() {
-		super();
-		super.setRegisterErrorPageFilter(Boolean.FALSE);
-
-	}
-
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(MessageSyswarApplication.class);
-	}
+public class MessageSyswarApplication{
 
 	public static void main(String[] args) {
 		SpringApplication.run(MessageSyswarApplication.class, args);
