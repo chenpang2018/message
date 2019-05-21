@@ -1,5 +1,6 @@
 package com.ecpss.message.controller.user;
 
+import com.ecpss.message.infrastructure.redis.RedisUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,14 +14,25 @@ import javax.annotation.Resource;
 @Controller
 @RequestMapping(value = "redis")
 public class RedisController {
+//    @Resource
+//    private JedisCluster jedisCluster;
+//
+//    @RequestMapping(value = "redisWelcome", produces = "text/html")
+//    @ResponseBody
+//    public String redisWelcome() {
+//
+//        String s = jedisCluster.get("hellp");
+//        return s;
+//    }
+
     @Resource
-    private JedisCluster jedisCluster;
+    private RedisUtil redisUtil;
 
     @RequestMapping(value = "redisWelcome", produces = "text/html")
     @ResponseBody
-    public String redisWelcome() {
+    public String redisWelcome(String name) {
 
-        String s = jedisCluster.get("hellp");
+        String s = redisUtil.getKey(name);
         return s;
     }
 }

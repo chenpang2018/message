@@ -11,14 +11,17 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "spring.redis")
 @PropertySource(value = "file:/web/profile/boot/redis-connect.properties")
 public class RedisConfig {
+    //集群redis配置
     private String nodes;
+    //单机版redis
+    private String host;
+    private String port;
     private String timeout;
     private String maxattempt;
     private String minidle;
     private String maxidle;
     private String maxactive;
     private String maxwait;
-
 
     public String getNodes() {
         return nodes;
@@ -74,5 +77,21 @@ public class RedisConfig {
 
     public void setMaxwait(String maxwait) {
         this.maxwait = maxwait;
+    }
+
+    public String getHost() {
+        return host;
+    }
+
+    public void setHost(String host) {
+        this.host = host;
+    }
+
+    public String getPort() {
+        return port;
+    }
+
+    public void setPort(String port) {
+        this.port = port;
     }
 }

@@ -30,4 +30,9 @@ public class UserServiceImpl implements UserService {
             throw new RuntimeException("异常回滚");
         }
     }
+
+    public BootUser getUserByUserNo(String userNo) {
+        BootUser bootUser = userRepository.findByUserNo(userNo);
+        return bootUser;
+    }
 }
